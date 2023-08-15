@@ -1,7 +1,11 @@
 #include "definition_importer.h"
 
 void MDefImporter::ImportDefinitionsImpl(){
+    #ifdef MDEBUG
     std::ifstream defFile("D:\\GitRepos\\mors\\src\\defs\\defs.txt");
+    #else
+    std::ifstream defFile("defs.txt");
+    #endif
     if(!defFile.is_open())
     {
         std::cout << "MDefImporter::ImportDefinition:: Failed to load definition.\n";

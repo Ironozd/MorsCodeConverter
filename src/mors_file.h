@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include "defs/definition_importer.h"
+#include "translation/translate.h"
 
 
 class FileToMors{

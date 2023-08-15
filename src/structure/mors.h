@@ -1,3 +1,6 @@
+#ifndef H_MORS_IMPL
+#define H_MORS_IMPL
+
 #include <iostream>
 #include <vector>
 #include <memory>
@@ -38,7 +41,4 @@ private:
     std::vector<std::shared_ptr<MChar>> mChars;
 };
 
-struct MFile
-{
-    std::vector<std::shared_ptr<MLetter>> mLetters;
-};
+#endif

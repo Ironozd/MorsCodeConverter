@@ -1,3 +1,6 @@
+#ifndef H_MDEF_IMPORTER
+#define H_MDEF_IMPORTER
+
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -8,7 +11,7 @@ class MDefImporter{
 public:
     static void ImportDefinitions() { Get().ImportDefinitionsImpl(); }
 
-    std::map<std::string, std::shared_ptr<MLetter>> getDefinitions() {return Definitions;}
+    static std::map<std::string, std::shared_ptr<MLetter>> getDefinitions() {return Get().Definitions;}
 private:
     static MDefImporter& Get(){
         static MDefImporter importer;
@@ -17,3 +20,5 @@ private:
     void ImportDefinitionsImpl();
     std::map<std::string, std::shared_ptr<MLetter>> Definitions;
 }; 
+
+#endif
