@@ -25,6 +25,7 @@ void MDefImporter::ImportDefinitionsImpl(){
             Definitions.insert({Character, letter});
         }
     }
-
+    defFile.clear();
+    defFile.close();
     std::cout << "Imported " << Definitions.size() << " mors definitions.\n";
 }
